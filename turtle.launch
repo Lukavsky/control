@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" >
+        <arg name="x_pos" value="0.0"/>
+        <arg name="y_pos" value="2.0"/>
+    </include>
+    <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch" />
+    <node name="rad_node" pkg="Lukavskiy_pkg" type="rad_node.py" output="screen"/>
+</launch>
